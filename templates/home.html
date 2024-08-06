@@ -1,5 +1,9 @@
 {% extends "_base.html" %}
 
 {% block content %}
-<h1>This is a message☻</h1>
+    <div class="list-group">
+        {% for message in message_list %} {% comment %} message_list: message esme on model ma hast (hala esmesh harchi bod jaye message miomad) va tike _list ghanonesh hast va bayad benevisim {% endcomment %}
+            <a href="#" class="list-group-item list-group-item-action">{{ message.text }}</a>
+        {% endfor %}
+    </div>
 {% endblock content %}
